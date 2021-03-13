@@ -3,6 +3,7 @@ package stepDefinitions;
 import com.codeborne.selenide.Configuration;
 import io.cucumber.java.en.Given;
 import org.junit.Assert;
+import pages.DocsPage;
 import pages.FeaturesPage;
 import pages.NavigaionPage;
 import pages.PricingPage;
@@ -13,7 +14,9 @@ public class NavigationPageSteps {
     NavigaionPage navigaionPage = new NavigaionPage();
     public final String mainHeader =  "Automated Test Results Dashboard";
     public final String pricingHeader =  "Simple and affordable pricing";
+
     PricingPage pricingPage;
+    DocsPage docsPage;
 
     @Given("User presses Features tab")
     public void pressFeatureTab() {
@@ -30,4 +33,12 @@ public class NavigationPageSteps {
     public void assertPricesTab() {
         Assert.assertEquals(pricingPage.getPricingHeader(), pricingHeader);
     }
+
+    @Given("User presses Docs tab")
+    public void pressDocsTab() {
+
+        docsPage = navigaionPage.openDocsPage();
+    }
+
+
 }

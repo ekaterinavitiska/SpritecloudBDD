@@ -17,6 +17,11 @@ public class NavigaionPage extends BasicPage{
         return page(PricingPage.class);
     }
 
+    public DocsPage openDocsPage() {
+        $(docsTab).waitUntil(clickable, Configuration.timeout).click();
+        return page(DocsPage.class);
+    }
+
     public SignUpPage openSignUpPagePage() {
         $(signUpTab).waitUntil(clickable, Configuration.timeout).click();
         return page(SignUpPage.class);

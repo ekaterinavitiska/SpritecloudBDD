@@ -15,6 +15,7 @@ public class BasicPage {
     public By pricingTab = By.xpath(("//*[contains(@href,'/pricing/')]"));
 
     public By signUpTab = By.xpath(("//*[contains(@href,'/users/sign_up')]"));
+    public By docsTab = By.xpath(("//*[contains(@href,'pro/documentation')]"));
     public By headersButton = By.xpath(("//*[text()='Accept']"));
 
 
